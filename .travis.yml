@@ -11,6 +11,11 @@ install:
     - pipenv install
 script:
     - pytest --cov=src --cov-config .coveragerc
+
+branches:
+  only:
+   - master
+   - development
 after_success:
     - coveralls
 addons:
